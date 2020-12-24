@@ -1,0 +1,20 @@
+{% extends "base.html" %} {% block head %} {{ super() }}
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='extended_beauty.css') }}"
+/>
+{% endblock %} {% block content %}
+<div class = 'index-page container-fluid text-center'>
+  <h1 class="main-header">Hello!</h1>
+    <center>
+      <img class="main-logo" src="{{ url_for('static', filename='images/agenda.png') }}" alt="Agenda"/>
+    </center>
+    <p>
+      Welcome to your Workout Agenda! <br />
+      This web app help you to track and record all your workouts like an agenda.
+    </p>
+</div>
+
+
+
+{% endblock %}

@@ -1,0 +1,62 @@
+{% extends "base.html" %} {% block head %} {{ super() }}
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='extended_beauty.css') }}"
+/>
+{% endblock %} {% block content %}
+<div class="create-page container-fluid col-md-4 col-md-offset-4">
+  <form method="POST" action="/new">
+    <h2 class="text-center">Add New Workout</h2>
+    <div class="form-group">
+      <label for="exercise">Exercise</label>
+      <input
+        type="text"
+        class="form-control"
+        id="exercise"
+        name="exercise"
+        aria-describedby="WorkoutHelp"
+        placeholder="Exercise"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="sets">Sets</label>
+      <input
+        type="number"
+        class="form-control"
+        id="sets"
+        name="sets"
+        aria-describedby="WorkoutHelp"
+        placeholder="Enter number of sets"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="reps">Reps/Time</label>
+      <input
+        type="text"
+        class="form-control"
+        id="reps"
+        name="reps"
+        aria-describedby="WorkoutHelp"
+        placeholder="Enter number of reps or time for set"
+        required
+      />
+    </div>
+    <div class="form-group">
+      <label for="notes">Notes/Tips</label>
+      <input
+        type="text"
+        class="form-control"
+        id="notes"
+        name="notes"
+        aria-describedby="WorkoutHelp"
+        placeholder="Notes/Tips"
+      />
+    </div>
+    <button type="submit" class="submit btn btn-primary">Add Workout</button>
+  </form>
+</div>
+
+
+{% endblock %}

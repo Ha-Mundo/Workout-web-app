@@ -1,0 +1,16 @@
+{% extends "base.html" %} {% block head %} {{ super() }}
+
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='extended_beauty.css') }}"
+/>
+{% endblock %}
+
+{% block content %}
+
+<center class="profile-page welcome container-fluid">
+  <h1>Welcome {{ name }}!</h1>
+  <P>It's time to add new workouts in your agenda....</P>
+</center>
+
+{% endblock %}

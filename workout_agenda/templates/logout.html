@@ -1,0 +1,20 @@
+{% extends "base.html" %} {% block head %} {{ super() }}
+<link
+  rel="stylesheet"
+  href="{{ url_for('static', filename='extended_beauty.css') }}"
+/>
+{% endblock %} {% block content %}
+<div class = 'logout-page container-fluid text-center'>
+  <h1 class="main-header">BYE! See You the next time!</h1>
+    <center>
+      <img class="main-logo" src="{{ url_for('static', filename='images/agenda.png') }}" alt="Agenda"/>
+    </center>
+    <p>
+      Thank you for using Workout Agenda <br />
+      Take a rest now and never give up!
+    </p>
+</div>
+
+
+
+{% endblock %}
